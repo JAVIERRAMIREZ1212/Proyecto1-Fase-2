@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario-vendedor</title>
+    <link rel="stylesheet" href="pagina.css"></link>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="shop">
+            <h1 class="logo">Bynary shop</h1>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Inicio.html">Cerrar sesion</a></l1>
+                    <li><a href="registro.html">Registrarse</a></l1>
+                    <li><a class="btn-CV" onclick="openCV()" id="Cambiarse_vendedor">Publicar</a>
+                        
+                        <section class="contemido-P" id="P_contenido">
+                            <div class="registro-P">
+                                <form action="">
+                                    <h1>Publicar
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close3" id="Ccerrar">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                    </h1>
+                        
+                                    <div class="contenedor-principal">
+                                        
+                                        <div class="cuadro-foto">
+                                            <label for="foto">Subir foto:</label>
+                                            <input type="file" id="foto" name="foto" accept="image/*">
+                                            <div class="preview-foto" id="preview-foto">
+                                                
+                                                <p>Previsualización de la foto: </p>
+                                            </div>
+                                        </div>
+                        
+                                        
+                                        <div class="campos-datos">
+                                            <p>Tendras que llenar estos datos:</p>
+
+                                            <input type="text" placeholder="Nombre:" required id="direccion1">
+                                            <input type="text" placeholder="Descripcion:" required id="numerodetelefono">
+                                            <input type="text" placeholder="Cantidad:" required id="gmail">
+                                            <input type="text" placeholder="Precio:" required id="ceduladeidentidad1">
+                                            
+                                            <div class="tipo-pago">
+                                                <label for="tipo-pago">Metodo de pagado que dispones:</label>
+                                                <select id="tipo-pago" name="tipo-pago" required>
+                                                    <option value=" " disabled selected>Seleccione una opción</option>
+                                                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                                                    <option value="efectivo">Efectivo</option>
+                                                    <option value="transferencia">Transferencia bancaria</option>
+                                                    <option value="PagoMovil">PagoMovil</option>
+                                                </select>
+                                            </div>
+
+                                            <h3 class="crear_button-P" onclick="comprobarDatos()">Publicar Producto</h3>
+
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+        
+            <div class="modal-container" id="container">
+                <div class="modal">
+                    <h1>Bienvenido Usuario-Vendedor</h1>
+                    <p>Bienvenido usuario, estas en la seccion de vista de 
+                        productos, aqui puedes ver direferentes productos
+                        y comprarlos o agregarlos al carrito
+                        recuerda llenar los datos bancarios para 
+                        proceder con las compras 
+                    </p>
+                    <button class="cerrar" id="close" onclick="cerrar()">Entendido!!!</button>
+                </div>
+            </div>
+
+        <section class="filas_productos1" id="contenedor de productos">
+
+                <h2>Revisa tus publicaciones</h2> 
+                <h4>en esta seccion puedes ver tus productos publicados
+                </h4>
+                
+                <div class="imagenes" id="_imagenes2">
+    
+                </div>
+                
+                
+        </section>
+
+        
+</header> 
+
+<section class="filas_productos1" id="contenedor de productos">
+
+            <h2>Revisa las publicaciones de otros usuarios </h2>
+            <h4>puedes ver que han publicado otros usuarios
+            </h4>
+            
+            <div class="imagenes" id="_imagenes1">
+
+            </div>
+            
+            </div>
+            
+        </section>
+
+<footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-section">
+
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+
+        </div>
+
+        
+        <div class="footer-section">
+
+            <h3>Contacto</h3>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    Dirección: Calle 238264, Caracas, Venezuela
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    Teléfono: +58 232 332
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    Email: javierramirezvzla@gmail
+                </li>
+            </ul>
+
+        </div>
+
+        
+        <div class="footer-section">
+
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-whatsapp "></i></a>
+                <a href="#"><i class="fa fa-telegram "></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 BynaryStore.</p>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</footer>
+
+    
+    <script src="Funciones Venta.js"></script>
+</body>
+</html>

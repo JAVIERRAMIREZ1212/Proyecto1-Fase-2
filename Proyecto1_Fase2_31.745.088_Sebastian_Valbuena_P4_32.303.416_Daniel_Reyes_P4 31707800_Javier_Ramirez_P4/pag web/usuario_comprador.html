@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario-comprador</title>
+    <link rel="stylesheet" href="pagina.css"></link>
+</head>
+<body>
+
+<header class="header">
+        <div class="shop">
+            <h1 class="logo">Bynary shop - Compra</h1>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Inicio.html">Cerrar sesión</a></l1>
+                    <li><a href="registro.html">Registrarse</a></l1>
+                    <li><a class="btn-CV" onclick="openCV()" id="Cambiarse_vendedor">Cambiarse a vendedor</a>
+
+                        <section class="contemido-DB" id="CV_contenido">
+                            <div class="registro"> 
+                                <form action="">
+                                    <h1>Cambiarse a Vendedor
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close2" id="Ccerrar" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+                                    </h1>
+                                    
+                        
+                                    <div class="apellidos">
+                                        <p>Tendras que llenar estos datos si deseas convertirte en usuario vendedor</p>
+                                        <input type="text1" placeholder="Direccion" required id="direccion1">
+                        
+                                        <div class="nombres">
+                                            <input type="text2" placeholder="numero de telefono" required id="numerodetelefono">
+                                        </div>
+                        
+                                        <div class="cedula">
+                                            <input type="text3" placeholder="gmail" required id="gmail">
+                                        </div>
+                        
+                                        <div class="edad">
+                                            <input type="text4" placeholder="Cedula de identidad" required id="ceduladeidentidad1">
+                                        </div>
+                        
+                                        <h3 class="crear_button" onclick="comprobarDatos()">Comfirmar Cambio</h3>
+
+                        
+                                    </div>
+                        
+                                    
+                            </form>
+                            </div>
+                        </section>
+                    
+                    </li>
+                    <li><a class="container-icon"> Carrito </a>
+
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    
+                        <div class="container-cart-product hidden-cart">
+                            <div class="row-product">
+                                <div class="cart-product">
+                                    <div class="info-cart-product">
+                                        <span class="cantidad-producto-carrito"></span>
+                                        <p class="titulo-producto-carrito">No hay nada en el carrito actualmente</p>
+                                        <span class="precio-producto-carrito"></span>
+                                        <span class="invisible3"></span>
+                                    </div>
+                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="cart-total">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">0$</span>
+                                <a class="btn-2">Pagar</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li><a class="btn-Datos-Bancarios" onclick="openDB()" id="DB">Datos Bancarios</a>
+
+                        <section class="contemido-DB" id="DB_contenido">
+                            <div class="registro"> 
+                                <form action="">
+
+                                    <h1>Datos Bancarios
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close2" id="DBcerrar" >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+                                    </h1>
+                                    
+                                    <div class="apellidos">
+                                        <input type="text1" placeholder="Direccion" required id="direccion">
+                        
+                                        <div class="nombres">
+                                            <input type="text2" placeholder="numero de tarjeta" required id="numerodetarjeta">
+                                        </div>
+                        
+                                        <div class="cedula">
+                                            <input type="text3" placeholder="Codigo de verificacion" required id="codigodeverificacion">
+                                        </div>
+                        
+                                        <div class="edad">
+                                            <input type="text4" placeholder="Cedula de identidad" required id="ceduladeidentidad">
+                                        </div>
+                        
+                                        <div class="numero">
+                                            <input type="text5" placeholder="tipo de ceunta " required id="tipodecuenta">
+                                        </div>
+                        
+                                        
+                                        
+                                        <h3 class="crear_button" onclick="comprobarDatosBancarios()">Guardar Datos</h3>
+                                    </div>
+                        
+                            </form>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    
+        
+            <div class="modal-container" id="container">
+                <div class="modal">
+                    <h1>Bienvenido Usuario-comprador</h1>
+                    <p>Bienvenido usuario, estas en la seccion de vista de 
+                        productos, aqui puedes ver direferentes productos
+                        y comprarlos o agregarlos al carrito
+                        recuerda llenar los datos bancarios para 
+                        proceder con las compras 
+                    </p>
+                    <button class="cerrar" id="close" onclick="cerrar()">Entendido!!!</button>
+                </div>
+            </div>
+
+    <section class="filas_productos1" id="contenedor de productos">
+
+    <h2>Revisa las publicaciones </h2>
+    <h4>Aqui podras ver varias publicaciones que estan disponibles actualmente
+    </h4>
+
+    <div class="imagenes" id="_imagenes"></div>
+
+    </div>
+
+</section>
+
+</header>
+
+<footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-section">
+
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+
+        </div>
+
+        
+        <div class="footer-section">
+
+            <h3>Contacto</h3>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    Dirección: Calle 238264, Caracas, Venezuela
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    Teléfono: +58 232 332
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    Email: javierramirezvzla@gmail
+                </li>
+            </ul>
+
+        </div>
+
+        
+        <div class="footer-section">
+
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-whatsapp "></i></a>
+                <a href="#"><i class="fa fa-telegram "></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 BynaryStore.</p>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</footer>
+
+
+
+    <script src="proyecto.js"></script>
+</body>
+</html>

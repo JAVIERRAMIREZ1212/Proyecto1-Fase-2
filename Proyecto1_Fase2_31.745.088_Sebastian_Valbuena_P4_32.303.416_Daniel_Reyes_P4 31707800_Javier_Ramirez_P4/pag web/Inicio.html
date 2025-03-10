@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="Inicio y Registro.css">
+</head>
+<body>
+
+    <div class="wrapper"> 
+        <form action="">
+            <h1>Bynary Shop</h1>
+        </form>
+    </div>
+
+    <div class="login"> 
+        <form action="">
+            <h1>Inicio de sesion</h1>
+
+            <div class="username">
+                <input type="text1" id="usuario" placeholder="username" required >
+
+                <div class="password">
+                    <input type="text2" id="contrasena" placeholder="password" required >
+                </div>
+
+                <select id="tipodecuenta">
+                    <option value="" disabled selected>Seleccione un Usuario</option>
+                        <option value="comprador">Comprador</option>
+                        <option value="vendedor">Vendedor</option>
+                        <option value="administrador">Administrador</option>
+                </select>
+                
+                <div class="inicio">
+                    <span onclick="comprobarCredenciales()" id="comprobar" class="iniciar" >Iniciar seccion</span>
+                </div>  
+
+            </div>
+
+            <div>
+                    <h4 id="iraregistro">
+                        ¿No tienes cuenta?
+                        <nav id="nav1"><a href="registro.html">ir a registro </a></nav>
+                    </h4>  
+            </div>
+            
+        </form>
+    </div>
+
+    
+<script src="proyecto.js"></script>
+</body>
+</html>
