@@ -41,7 +41,7 @@ function AgregarproductoADM(producto){
             <img src=${producto.imagen} alt="">
             <h3>${producto.nombre}
                 <div>
-                    catidad ToTal = 
+                    cantidad ToTal = 
                     <span class="Cantidad_producto">${producto.cantidad}</span>
                 </div>
                 
