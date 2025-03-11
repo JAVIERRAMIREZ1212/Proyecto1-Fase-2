@@ -81,7 +81,7 @@ function Publicar1(nombre,descripcion,cantidad,precio,imagen){
             <img src=${imagen} alt="">
             <h3>${nombre}
                 <div>
-                    catidad ToTal = 
+                    cantidad ToTal = 
                     <span class="Cantidad_producto">${cantidad}</span>
                 </div>
                 
@@ -135,7 +135,7 @@ function AgregarproductoADM(producto){
             <img src=${producto.imagen} alt="">
             <h3>${producto.nombre}
                 <div>
-                    catidad ToTal = 
+                    cantidad ToTal = 
                     <span class="Cantidad_producto">${producto.cantidad}</span>
                 </div>
                 
@@ -160,7 +160,7 @@ window.onload = function agregar1(){
 const productos = [
     {
         nombre: "Nissan Skyline R32",
-        descripcion: "Carro japones en bunas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
+        descripcion: "Carro japones en buenas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
         precio: 5000,
         cantidad: 1,
         imagen: "imagenes/pl1.jpg",
