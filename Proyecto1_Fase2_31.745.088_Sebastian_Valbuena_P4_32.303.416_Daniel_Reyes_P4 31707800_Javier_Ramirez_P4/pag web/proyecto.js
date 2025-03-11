@@ -376,7 +376,7 @@ function AgregarproductoCompra(producto){
             <img src=${producto.imagen} alt="">
             <h3>${producto.nombre}
                 <div>
-                    catidad ToTal = 
+                    cantidad ToTal = 
                     <span class="Cantidad_producto">${producto.cantidad}</span>
                 </div>
                 
@@ -406,7 +406,7 @@ window.onload = function agregar(){
 const productos = [
     {
         nombre: "Nissan Skyline R32",
-        descripcion: "Carro japones en bunas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
+        descripcion: "Carro japones en buenas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
         precio: 5000,
         cantidad: 1,
         imagen: "imagenes/pl1.jpg",
