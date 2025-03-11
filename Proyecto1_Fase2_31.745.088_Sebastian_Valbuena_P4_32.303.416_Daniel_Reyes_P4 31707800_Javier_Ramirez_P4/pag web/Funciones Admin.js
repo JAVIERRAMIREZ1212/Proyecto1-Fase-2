@@ -67,7 +67,7 @@ window.onload = function agregar1(){
 const productos = [
     {
         nombre: "Nissan Skyline R32",
-        descripcion: "Carro japones en bunas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
+        descripcion: "Carro japones en buenas condiciones, motor 2jz, año 1998, 600hp, precio negociable",
         precio: 5000,
         cantidad: 1,
         imagen: "imagenes/pl1.jpg",
